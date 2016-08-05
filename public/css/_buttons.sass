@@ -1,0 +1,81 @@
+// Standard button, must be used with one of the colour classes below
+button,
+.btn
+  display: inline-block
+  margin: 0 10px 0 0
+  padding: 9px 20px 10px
+  height: 36px
+  line-height: 16px
+  @extend .wgsn-font
+  @extend .text-center
+  border-radius: 3px
+  transition: all 300ms
+  transform: translate3d(0, 0, 0)
+  cursor: pointer
+
+  span
+    @extend .wgsn-font
+    font-size: 1em
+
+  &:active
+    transform: translate3d(0, 2px, 0)
+
+  &:focus
+    outline: none
+
+  // coloured
+  &.btn-coloured
+    border: 1px solid $instock
+    background: $instock
+    color: white
+
+    &:not(.btn-disabled):hover
+      background: lighten($instock, 10)
+
+  // black
+  &.btn-black
+    border: 1px solid black
+    background: black
+    color: white
+
+    &:not(.btn-disabled):hover
+      background: lighten(black, 10)
+
+  // white
+  &.btn-white
+    border: 1px solid $md-grey
+    background: white
+    color: $dk-grey
+
+    &:not(.btn-disabled):hover
+      background: darken(white, 2)
+
+  // clear
+  &.btn-clear
+    border: 1px solid white
+    background: transparent
+    color: white
+
+    &:not(.btn-disabled):hover
+      background: rgba(black, 0.2)
+
+  // disabled
+  &.btn-disabled
+    opacity: 0.5
+    cursor: default
+
+  // full-width, block
+  &.btn-full
+    display: block
+    width: 100%
+    margin: 0
+
+  // large
+  &.btn-lg
+    height: 48px
+    padding: 17px 20px
+
+  // small
+  &.btn-sm
+    height: 26px
+    padding: 5px 10px 7px

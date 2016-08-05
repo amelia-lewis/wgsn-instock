@@ -1,0 +1,23 @@
+doctype
+block vars
+  - var bodyclass = null
+
+html
+  head
+    title WGSN Instock
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css")
+    link(href="https://file.myfontastic.com/VeyjPfaKqwcaCVK6kquFB4/icons.css" rel="stylesheet")
+    //- script(src="https://use.fontawesome.com/7c5bf366d0.js")
+  
+  body.bg-xlt-grey(class=bodyclass)
+    header.bg-black
+    
+    #content
+      block content
+    
+    footer.block-ver-sm.text-center.bg-black
+      p.tight.text-smaller Home&nbsp;&nbsp;|&nbsp;&nbsp;About WGSN&nbsp;&nbsp;|&nbsp;&nbsp;Help&nbsp;&nbsp;|&nbsp;&nbsp;Legal Info
+
+  //- include partials/scripts
